@@ -66,11 +66,29 @@
       </section>
       <section class="main__hero clearfix">
         <div class="hero__slider">
+          <input type="radio" name="hero-slider" id="toggle-1" checked>
+          <input type="radio" name="hero-slider" id="toggle-2">
+          <div class="slides-controls">
+            <label class="toggle-1" for="toggle-1"></label>
+            <label class="toggle-2" for="toggle-2"></label>
+          </div>
+          <div class="arrow-controls">
+              <label class="left" for="toggle-1"></label>
+              <label class="right" for="toggle-2"></label>
+            </div>
+
           <div class="hero__slides">
-            <div class="slide-1">
-              <h2 class="slide__title"><a class="slide__link" href="#">Перфораторы</a></h2>
-              <p class="slide__subtitle">Настоящие мужские игрушки</p>
-              <a class="slide__btn btn" href="#">Открыть каталог</a>
+            <div class="slides__wrapper">
+              <div class="slide1">
+                <h2 class="slide__title"><a class="slide__link" href="#">Перфораторы</a></h2>
+                <p class="slide__subtitle">Настоящие мужские игрушки</p>
+                <a class="slide__btn btn" href="#">Открыть каталог</a>
+                </div>
+                <div class="slide2">
+                <h2 class="slide__title"><a class="slide__link" href="#">Дрели</a></h2>
+                <p class="slide__subtitle">Соседям на радость!</p>
+                <a class="slide__btn btn" href="#">Открыть каталог</a>
+                </div>
               </div>
           </div>
         </div>
@@ -136,7 +154,7 @@
         </div>
         <div class="popular-producers__heading">
           <h2 class="popular__title">Популярные производители:</h2>
-          <a class="popular__btn btn">Все производители</a>
+          <a class="popular__btn btn" href="#">Все производители</a>
         </div>
         <ul class="popular-producers__catalog">
           <li class="catalog__item">
@@ -207,22 +225,24 @@
       </div>
     </section>
     <section class="main__about">
-      <div class="about">
-        <h2 class="about__title">Компания «Техномарт»</h2>
-        <p class="about__text">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкномить на гастарбайтерах.</p>
-        <p class="about__text">Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:</p>
-        <ul class="about__list">
-          <li class="about__item">Деловые линии</li>
-          <li class="about__item">Автотрейдинг</li>
-          <li class="about__item">ЖелДорЭкспедиция</li>
-        </ul>
-        <a class="about__btn btn" href="#">Подробнее о компании</a>
-      </div>
-      <div class="contacts">
-        <h2 class="contacts__title">Контакты</h2>
-        <p class="contacts__text">Вы можете забрать товар сами, заехав в наш офис:</p>
-        <img class="contacts__map-static" src="img/map-static.jpg" alt="Адрес офиса: г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8">
-        <a class="contacts__btn btn" href="#">Заблудились? Напишите нам!</a>
+      <div class="container">
+        <div class="about">
+          <h2 class="about__title">Компания «Техномарт»</h2>
+          <p class="about__text">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкномить на гастарбайтерах.</p>
+          <p class="about__text">Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:</p>
+          <ul class="about__list">
+            <li class="about__item">Деловые линии</li>
+            <li class="about__item">Автотрейдинг</li>
+            <li class="about__item">ЖелДорЭкспедиция</li>
+          </ul>
+          <a class="about__btn btn" href="#">Подробнее о компании</a>
+        </div>
+        <div class="contacts">
+          <h2 class="contacts__title">Контакты</h2>
+          <p class="contacts__text">Вы можете забрать товар сами, заехав в наш офис:</p>
+          <img class="contacts__map-static" src="img/map-static.jpg" alt="Адрес офиса: г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8">
+          <a class="contacts__btn btn" href="#">Заблудились? Напишите нам!</a>
+        </div>
       </div>
     </section>
   </main>

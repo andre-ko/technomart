@@ -37,6 +37,10 @@ body {
   width: 940px;
 }
 
+.header__upper-section .container {
+  position: relative;
+}
+
 .logo {
   position: relative;
   display: inline-block;
@@ -117,6 +121,7 @@ body {
 
 .header__search-form {
   position: absolute;
+  left: 230px;
   display: inline-block;
   width: 270px;
   height: 42px;
@@ -398,11 +403,13 @@ body {
 .item_materials::after {
   content: "";
   position: absolute;
-  top: 30px;
+  top: 31px;
   right: 43px;
   width: 44px;
   height: 65px;
-  background-color: #ffffff;
+  background-image: url("../img/sprites-big.png");
+  background-repeat: no-repeat;
+  background-position: -10px -298px;
 }
 
 .item_instrument {
@@ -416,7 +423,9 @@ body {
   right: 28px;
   width: 75px;
   height: 61px;
-  background-color: #ffffff;
+  background-image: url("../img/sprites-big.png");
+  background-repeat: no-repeat;
+  background-position: -10px -145px;
 }
 
 .item_technics {
@@ -430,7 +439,9 @@ body {
   right: 31px;
   width: 78px;
   height: 62px;
-  background-color: #ffffff;
+  background-image: url("../img/sprites-big.png");
+  background-repeat: no-repeat;
+  background-position: -10px -73px;
 }
 
 .item_sales {
@@ -453,13 +464,100 @@ body {
 
 .hero__slider {
   float: left;
+  position: relative;
+  width: 620px;
+  height: 266px;
+}
+
+.slides-controls {
+  position: absolute;
+  bottom: 38px;
+  left: 50%;
+  margin-left: -15px;
+  width: 30px;
+  height: 10px;
+  vertical-align: 0%;
+  z-index: 100;
+  font-size: 0;
+}
+
+.arrow-controls {
+  position: absolute;
+  width: 620px;
+  bottom: 112px;
+  vertical-align: 0%;
+  z-index: 100;
+}
+
+.toggle-1 {
+  margin-right: 10px;
+}
+
+ .arrow-controls label {
+  width: 22px;
+  height: 40px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.slides-controls label {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 210;
+  background-color: #ffffff;
+}
+
+
+.left {
+  float: left;
+  margin-left: 25px;
+  display: inline-block;
+  width: 22px;
+  height: 40px;
+  cursor: pointer;
+  background-image: url("../img/sprites-big.png");
+  background-repeat: no-repeat;
+  background-position: -10px -373px;
+}
+
+.right {
+  float: right;
+  margin-right: 20px;
+  display: inline-block;
+  width: 22px;
+  height: 40px;
+  cursor: pointer;
+  background-image: url("../img/sprites-big.png");
+  background-repeat: no-repeat;
+  background-position: -42px -373px;
+}
+
+.arrow-controls label:hover {
+  opacity: 0.7;
+}
+
+.hero__slider input[type=radio] {
+  display: none;
+}
+
+.hero__slides {
   width: 620px;
   height: 266px;
   overflow: hidden;
 }
 
-.hero__slider .slide-1 {
+.slides__wrapper {
+  width: 1860px;
+  font-size: 0;
+  overflow: hidden;
+}
+
+.slides__wrapper .slide1 {
   position: relative;
+  display: inline-block;
   padding-top: 25px;
   padding-left: 25px;
   width: 620px;
@@ -467,6 +565,35 @@ body {
   background: #f2f6f8 url("../img/slider1.jpg") no-repeat top left;
   color: #ffffff;
   box-sizing: border-box;
+}
+
+.slides__wrapper .slide2 {
+  position: relative;
+  display: inline-block;
+  padding-top: 25px;
+  padding-left: 25px;
+  width: 620px;
+  height: 266px;
+  background: #f2f6f8 url("../img/slider2.jpg") no-repeat top left;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+#toggle-1:checked ~ .slides-controls label[class="toggle-1"],
+#toggle-2:checked ~ .slides-controls label[class="toggle-2"] {
+  z-index: 210;
+  width: 10px;
+  height: 10px;
+  background-color: #ee3643;
+  box-shadow: inset 0 0 0 2px white;
+}
+
+#toggle-1:checked ~ .hero__slides .slides__wrapper {
+    transform: translate(0);
+}
+
+#toggle-2:checked ~ .hero__slides .slides__wrapper {
+    transform: translate(-620px);
 }
 
 .slide__title {
@@ -505,7 +632,9 @@ body {
   right: 45px;
   width: 59px;
   height: 72px;
-  background-color: #ffffff;
+  background-image: url("../img/sprites-big.png");
+  background-repeat: no-repeat;
+  background-position: -10px -216px;
 }
 
 .main-sections__item.item_delivery {
@@ -520,7 +649,10 @@ body {
   right: 31px;
   width: 78px;
   height: 63px;
-  background-color: #ffffff;
+  background-image: url("../img/sprites-big.png");
+  background-repeat: no-repeat;
+  background-position: -10px -0px;
+}
 }
 
 .main__popular {
@@ -980,7 +1112,9 @@ body {
   transform: translate(-1460px);
 }
 
-
+.about {
+  float: left;
+}
 
 
 
