@@ -243,9 +243,12 @@
         <div class="contacts">
           <h2 class="contacts__title">Контакты</h2>
           <p class="contacts__text">Вы можете забрать товар сами, заехав&nbsp;в&nbsp;наш&nbsp;офис:</p>
-          <a class="modal__map" href="#"><img class="contacts__map-static" src="img/map-static.jpg" alt="Адрес офиса: г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8"></a>
+          <a class="modal__map js__map_open" href="#"><img class="contacts__map-static" src="img/map-static.jpg" alt="Адрес офиса: г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8"></a>
           <a class="contacts__btn btn" href="#">Заблудились? Напишите нам!</a>
         </div>
+      </div>
+      <div class="modal__map_big">
+        <button class="modal__form_close" title="Закрыть или Esc">Закрыть</button>
       </div>
     </section>
   </main>
@@ -297,15 +300,15 @@
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
         <div class="input__name">
           <label for="fullname">Ваше имя:</label>
-          <input type="text" name="fullname" id="fullname" placeholder="Представьтесь, пожалуйста">
+          <input type="text" name="fullname" id="fullname" placeholder="Представьтесь, пожалуйста" required>
         </div>
         <div class="input__email">
           <label for="email">Ваш e-mail:</label>
-          <input type="text" name="email" id="email" placeholder="Для отправки ответа">
+          <input type="text" name="email" id="email" placeholder="Для отправки ответа" required>
         </div>
         <div class="textarea__message">
           <label for="message">Текст письма:</label>
-          <textarea name="message" id="message" placeholder="В свободной форме" rows="5"></textarea>
+          <textarea name="message" id="message" placeholder="В свободной форме" rows="5" required></textarea>
         </div>
         <div class="form__wrapper">
           <button class="btn send__btn" type="submit">Отправить</button>
@@ -313,24 +316,6 @@
       </form>
     </div>
   </div>
-
-  <script>
-    var link = document.querySelector(".contacts__btn");
-
-    var popup = document.querySelector(".modal__form");
-    var close = popup.querySelector(".modal__form_close");
-
-
-    link.addEventListener("click", function(event) {
-      event.preventDefault();
-      popup.classList.add("modal__form_show");
-      });
-
-    close.addEventListener("click", function(event) {
-      event.preventDefault();
-      popup.classList.remove("modal__form_show");
-      });
-
-  </script>
+  <script src=js/scripts.js></script>
 </body>
 </html>
