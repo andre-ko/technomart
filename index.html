@@ -293,7 +293,25 @@
     </div>
   </footer>
   <div class="modal__form">
-  <div class="modal__form_close"></div>
+  <button class="modal__form_close"></button>
+      <form class="form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="input__name">
+          <label for="fullname">Ваше имя:</label>
+          <input type="text" name="fullname" id="fullname" placeholder="Представьтесь, пожалуйста">
+        </div>
+        <div class="input__email">
+          <label for="email">Ваш e-mail:</label>
+          <input type="text" name="email" id="email" placeholder="Для отправки ответа">
+        </div>
+        <div class="textarea__message">
+          <label for="message">Текст письма:</label>
+          <textarea name="message" id="message" placeholder="В свободной форме" rows="5"></textarea>
+        </div>
+        <div class="form__wrapper">
+          <button class="btn send__btn" type="submit">Отправить</button>
+        </div>
+      </form>
+    </div>
   </div>
 
   <script>
