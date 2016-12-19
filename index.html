@@ -30,8 +30,10 @@
           <b class="header__phone">+7 (812) 555-05-55</b>
           г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
         </p>
-        <a class="header__btn btn_sign-in" href="#">Войти</a>
-        <a class="header__btn btn_sign-up" href="#">Регистрация</a>
+        <div class="header__user-block">
+          <a class="header__btn btn_sign-in" href="#">Войти</a>
+          <a class="header__btn btn_sign-up" href="#">Регистрация</a>
+        </div>
       </div>
       <nav class="header__nav">
         <ul class="nav__list">
@@ -124,7 +126,7 @@
               <a class="actions__buy" href="#">Купить</a>
               <a class="actions__bookmark" href="#">В закладки</a>
             </div>
-            <div class="item__image"><img src="img/bosch-bfg3000.png" width="218" height="169" alt="Перфоратор BOSCH BFG 9000"></div>
+            <div class="item__image"><img src="img/bosch-bfg3000.png" width="218" height="169" alt="Перфоратор BOSCH BFG 3000"></div>
             <div class="catalog__title">Перфоратор BOSCH BFG 3000</div>
             <div class="catalog__discount">22500 Р.</div>
             <a class="catalog__price" href="#">15500 Р.</a>
@@ -135,7 +137,7 @@
               <a class="actions__buy" href="#">Купить</a>
               <a class="actions__bookmark" href="#">В закладки</a>
             </div>
-            <div class="item__image"><img src="img/bosch-bfg6000.png" width="218" height="169" alt="Перфоратор BOSCH BFG 9000"></div>
+            <div class="item__image"><img src="img/bosch-bfg6000.png" width="218" height="169" alt="Перфоратор BOSCH BFG 6000"></div>
             <div class="catalog__title">Перфоратор BOSCH BFG 6000</div>
             <div class="catalog__discount">30500 Р.</div>
             <a class="catalog__price" href="#">25500 Р.</a>
@@ -146,7 +148,7 @@
               <a class="actions__buy" href="#">Купить</a>
               <a class="actions__bookmark" href="#">В закладки</a>
             </div>
-            <div class="item__image"><img src="img/bosch-bfg2000.png" width="218" height="169" alt="Перфоратор BOSCH BFG 9000"></div>
+            <div class="item__image"><img src="img/bosch-bfg2000.png" width="218" height="169" alt="Перфоратор BOSCH BFG 2000"></div>
             <div class="catalog__title">Перфоратор BOSCH BFG 2000</div>
             <div class="catalog__discount"></div>
             <a class="catalog__price" href="#">12500 Р.</a>
@@ -290,5 +292,27 @@
       </div>
     </div>
   </footer>
+  <div class="modal__form">
+  <div class="modal__form_close"></div>
+  </div>
+
+  <script>
+    var link = document.querySelector(".contacts__btn");
+
+    var popup = document.querySelector(".modal__form");
+    var close = popup.querySelector(".modal__form_close");
+
+
+    link.addEventListener("click", function(event) {
+      event.preventDefault();
+      popup.classList.add("modal__form_show");
+      });
+
+    close.addEventListener("click", function(event) {
+      event.preventDefault();
+      popup.classList.remove("modal__form_show");
+      });
+
+  </script>
 </body>
 </html>
