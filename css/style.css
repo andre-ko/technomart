@@ -1,5 +1,3 @@
-/* { outline: 1px solid red; } */
-
 html {
   margin: 0;
   padding: 0;
@@ -2028,7 +2026,9 @@ fieldset {
   animation: zoomIn 0.25s;
 }
 
-.modal__form_close {
+.modal__form_close,
+.modal__map_close,
+.modal__basket_close {
   position: absolute;
   top: 7px;
   right: 7px;
@@ -2042,7 +2042,11 @@ fieldset {
 }
 
 .modal__form_close::before,
-.modal__form_close::after {
+.modal__form_close::after,
+.modal__map_close::before,
+.modal__map_close::after,
+.modal__basket_close::before,
+.modal__basket_close::after {
   content: "";
   position: absolute;
   top: 10px;
@@ -2053,11 +2057,15 @@ fieldset {
   border-radius: 0;
 }
 
-.modal__form_close::before {
+.modal__form_close::before,
+.modal__map_close::before,
+.modal__basket_close::before {
   transform: rotate(45deg);
 }
 
-.modal__form_close::after {
+.modal__form_close::after,
+.modal__map_close::after,
+.modal__basket_close::after {
   transform: rotate(-45deg);
 }
 
@@ -2162,11 +2170,12 @@ fieldset {
   position: absolute;
   top: 50%;
   left: 50%;
+  display: none;
   margin-top: -141px;
   margin-left: -310px;
   width: 620px;
   height: 282px;
-  border: ;
+  border-top: 7px solid #ee3643;
   box-sizing: border-box;
 }
 
